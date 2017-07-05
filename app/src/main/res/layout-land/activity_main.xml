@@ -1,0 +1,204 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation = "vertical"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:paddingTop="16dp"
+    android:paddingBottom="16dp"
+    tools:context=".MainActivity"
+    android:background="@drawable/poker_felt">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation = "horizontal">
+
+    <Button
+        android:layout_width="50dp"
+        android:layout_height="30dp"
+        android:text = "DEAL"
+        android:onClick = "getHand"
+        android:textColor="#fffffb1d"
+        android:background="#ffff2817" />
+
+    <Button
+        android:layout_marginLeft = "15dp"
+        android:layout_width="90dp"
+        android:layout_height="30dp"
+        android:text = "NEXT HAND"
+        android:onClick = "nextHand"
+        android:textColor="#fffffc11"
+        android:background="#ffff170c" />
+
+    <Button
+        android:layout_marginLeft = "15dp"
+        android:layout_width="100dp"
+        android:layout_height="30dp"
+        android:text = "INSTRUCTIONS"
+        android:onClick = "instructionsDialog"
+        android:textColor="#fffffc11"
+        android:background="#ffff170c" />
+
+    <TextView
+        android:layout_marginLeft = "80dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text = "Coins left : 100 coins."
+        android:id = "@+id/txtScore"
+        android:textSize = "20dp"
+        android:textColor = "#fffcfffa"
+    />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation = "horizontal"
+        android:layout_marginLeft = "50dp"
+        android:layout_marginTop = "15dp"
+        android:background="#ffff1512">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text = "Royal Flush: 5000 coins \n Straight Flush: 1000 coins \n Four of a Kind: 500 coins \n Regular Straight: 200 coins \n Flush: 100 coins"
+            android:id = "@+id/txtPoints"
+            android:textSize = "15dp"
+            android:textColor = "#fffff622"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_marginLeft = "50dp"
+            android:layout_height="wrap_content"
+            android:text = "Full House: 50 coins \n Three Of A Kind: 30 coins \n Two Pairs: 20 coins \n One Pair (Jacks or Better): 10 coins \n High Card: 0 coins"
+            android:id = "@+id/txtPoints"
+            android:textSize = "15dp"
+            android:textColor = "#fffffa18"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop = "15dp">
+
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="120dp"
+        android:id="@+id/cardSlot1"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="10dp"
+        android:src = "@drawable/card_back"
+        android:layout_marginRight = "10dp"/>
+
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="120dp"
+        android:id="@+id/cardSlot2"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="10dp"
+        android:layout_marginRight = "10dp"
+        android:src = "@drawable/card_back"/>
+
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="120dp"
+        android:id="@+id/cardSlot3"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="10dp"
+        android:layout_marginRight = "10dp"
+        android:src = "@drawable/card_back"/>
+
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="120dp"
+        android:id="@+id/cardSlot4"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="10dp"
+        android:layout_marginRight = "10dp"
+        android:src = "@drawable/card_back"/>
+
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="120dp"
+        android:id="@+id/cardSlot5"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="10dp"
+        android:src = "@drawable/card_back"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp">
+
+        <Button
+            android:layout_width="100dp"
+            android:layout_height="30dp"
+            android:text = "REMOVE"
+            android:layout_marginRight="10dp"
+            android:id = "@+id/btnRemove1"
+            android:onClick = "remove1"
+            android:background="#ffff2a1c"
+            android:textColor="#fffffe1e" />
+
+        <Button
+            android:layout_width="100dp"
+            android:layout_height="30dp"
+            android:text = "REMOVE"
+            android:layout_marginRight="10dp"
+            android:id = "@+id/btnRemove2"
+            android:onClick = "remove2"
+            android:background="#ffff2a1c"
+            android:textColor="#fffffe1e"
+            />
+
+        <Button
+            android:layout_width="100dp"
+            android:layout_height="30dp"
+            android:text = "REMOVE"
+            android:layout_marginRight="10dp"
+            android:id = "@+id/btnRemove3"
+            android:onClick = "remove3"
+            android:background="#ffff2a1c"
+            android:textColor="#fffffe1e"
+            />
+
+        <Button
+            android:layout_width="100dp"
+            android:layout_height="30dp"
+            android:text = "REMOVE"
+            android:layout_marginRight="10dp"
+            android:id = "@+id/btnRemove4"
+            android:onClick = "remove4"
+            android:background="#ffff2a1c"
+            android:textColor="#fffffe1e"
+            />
+
+        <Button
+            android:layout_width="100dp"
+            android:layout_height="30dp"
+            android:text = "REMOVE"
+            android:layout_marginRight="10dp"
+            android:id = "@+id/btnRemove5"
+            android:onClick = "remove5"
+            android:background="#ffff2a1c"
+            android:textColor="#fffffe1e"
+            />
+
+    </LinearLayout>
+
+</LinearLayout>
